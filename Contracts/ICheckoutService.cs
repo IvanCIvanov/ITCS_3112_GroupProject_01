@@ -3,13 +3,13 @@
 /// Interface for the CheckoutService. 
 /// </summary>
 
-//Need to go back through and make sure it has proper xml documentation
+/// Need to go back through and make sure it has proper xml documentation
 
-public interface ICheckoutService
+public interface ICheckoutService 
 {
     ICatalog GetCatalog { get; }
 
-    Receipt Checkout(string itemId, Borrower borrower, DateTime dueDate);
+    Receipt Checkout(string itemId, Customer customer, DateTime dueDate);
 
     Receipt ReturnItem(string itemId);
     

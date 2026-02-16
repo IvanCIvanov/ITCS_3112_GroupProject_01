@@ -14,21 +14,5 @@
         public string Name { get; set; }
     }
 
-    /// <summary>
-    /// Represents a customer who can check out items.
-    /// Demonstrates Inheritance (Derived Class).
-    /// </summary>
-    public class Customer : Person
-    {
-        public List<Item> Item { get; set; } = new List<Item>();
-    }
-
-    /// <summary>
-    /// Represents an employee who manages items.
-    /// Demonstrates Inheritance (Derived Class).
-    /// </summary>
-    public class Employee : Person
-    {
-        public List<Item> Item { get; set; } = new List<Item>();
-    }
+    
 }

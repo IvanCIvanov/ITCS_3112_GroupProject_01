@@ -1,4 +1,4 @@
-﻿namespace ITCS_3112_Exercise_2.Domain;
+﻿namespace ITCS_3112_Exercise_2;
 
 /// <summary>
 /// Represents an employee who manages items.

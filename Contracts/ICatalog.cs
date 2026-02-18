@@ -2,5 +2,9 @@
 
 public interface ICatalog
 {
+    List<Item> GetAvailableItems();
+    List<Item> GetUnavailableItems();
+    List<Item> Search(string query);
+    
     
 }

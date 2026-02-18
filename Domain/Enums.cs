@@ -5,6 +5,10 @@
     /// </summary>
     public enum TypeEnum
     {
+        Laptop,
+        Sensor,
+        Camera,
+        Cable,
         Book,
         NewsPaper,
         GameConsole,
@@ -21,6 +25,7 @@
         Available,
         Unavailable,
         CheckedOut,
+        Lost,
         Reserved
     }
 }

@@ -1,5 +1,4 @@
-﻿namespace ITCS_3112_Exercise_2
-{
+﻿namespace ITCS_3112_Exercise_2.Domain;
     /// <summary>
     /// Base class representing a person within the system.
     /// Demonstrates the Inheritance requirement (Base Class).
@@ -10,9 +9,29 @@
         /// Gets the unique identifier for the person. 
         /// Set to init to respect the {readonly} requirement in UML.
         /// </summary>
-        public int Id { get; init; }
+        public long Id { get; init; }
         public string Name { get; set; }
+        public string Email { get; set; }
+
+
+        protected Person(long id, string name, string email)
+        {
+            Id = id;
+            Name = name;
+            Email = email;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
     
-}

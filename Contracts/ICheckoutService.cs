@@ -1,4 +1,5 @@
-﻿namespace ITCS_3112_Exercise_2.Contracts;
+﻿using ITCS_3112_Exercise_2.Domain;
+namespace ITCS_3112_Exercise_2.Contracts;
 /// <summary>
 /// Interface for the CheckoutService. 
 /// </summary>
@@ -15,11 +16,11 @@ public interface ICheckoutService
     
     void MarkLost(string itemId);
 
-    List<CheckoutRecord> ListActiveLoans();
+    List<Domain.CheckoutService> ListActiveLoans();
 
-    List<CheckoutRecord> FindDueSoon(TimeSpan window);
+    List<Domain.CheckoutService> FindDueSoon(TimeSpan window);
 
-    List<CheckoutRecord> FindOverdue();
+    List<Domain.CheckoutService> FindOverdue();
 
 
 }

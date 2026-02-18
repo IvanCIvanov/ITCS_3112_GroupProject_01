@@ -13,38 +13,26 @@ namespace ITCS_3112_Exercise_2
             
             
             // 1. Create an Item
-            Item VrHeadset = new Item 
+            Item vrHeadset = new Item(295002835, "Oculus Rift", TypeEnum.VrHeadset)
             { 
-                Id = 295002835,
-                Type = TypeEnum.VrHeadset, 
                 Status = StatusEnum.Available,
                 Damages = "None"
             };
-            Item Dvd = new Item 
+            Item dvd = new Item(491002837, "Prince of Persia", TypeEnum.Dvd)
             { 
-                Id = 491002837,
-                Type = TypeEnum.Dvd, 
                 Status = StatusEnum.Unavailable,
                 Damages = "Minor Scratches on Display Side."
             };
 
             // 2. Create a Customer (Inheritance)
-            Customer student = new Customer 
-            { 
-                Id = 101, 
-                Name = "Ivan" 
-            };
+            Customer student = new Customer(101, "Ivan", "iivanov2@charlotte.edu");
 
-            Employee employee = new Employee
-            {
-                Id = 102,
-                Name = "Marty"
-            };
+            Employee employee = new Employee(102, "Marty", "msmith5@charlotte.edu");
 
             // 3. Create a CheckoutRecord 
             
-            repository.AddItem(VrHeadset);
-            repository.AddItem(Dvd);
+            repository.AddItem(vrHeadset);
+            repository.AddItem(dvd);
             
             var availableItems = catalog.GetAvailableItems();
 
@@ -68,23 +56,23 @@ namespace ITCS_3112_Exercise_2
             
             // The Receipt is created internally via the constructor
             
-            CheckoutRecord record = new CheckoutRecord("Vr Headset rented for 7 days to Ivan Ivanov.\n\t Damages: none.");
-            record.Borrower = student;
-            record.Item.Add(VrHeadset);
-            VrHeadset.Status = StatusEnum.CheckedOut;
+            CheckoutService service = new CheckoutService("Vr Headset rented for 7 days to Ivan Ivanov.\n\t Damages: none.", student, catalog);
+            service.Borrower = student;
+            service.Item = vrHeadset;
+            vrHeadset.Status = StatusEnum.CheckedOut;
 
             // 4. Print the Receipt
-            record.Receipt.Print(record.Item);
+            service.Receipt.Print(service.Item);
             Console.WriteLine("--- END OF RECEIPT ---");
             
             Console.WriteLine("\nProof of functionality: ");
             Console.WriteLine("\nCustomer Name tied to Item on Checkout Record:");
-            Console.WriteLine("Name: "+ record.Borrower.Name);
-            Console.WriteLine("Item Borrowed: "+record.Item[0].Type); 
-            Console.WriteLine("Date Checked Out: "+record.CheckoutDate);
-            Console.WriteLine("Due Date: "+record.DueDate);
+            Console.WriteLine("Name: "+ service.Borrower.Name);
+            Console.WriteLine("Item Borrowed: "+service.Item.Type); 
+            Console.WriteLine("Date Checked Out: "+service.CheckoutDate);
+            Console.WriteLine("Due Date: "+service.DueDate);
 
-            Console.WriteLine("\nStatus of checked out Item: " + record.Item[0].Status);
+            Console.WriteLine("\nStatus of checked out Item: " + service.Item.Status);
             
         }
     }

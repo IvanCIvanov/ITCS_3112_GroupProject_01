@@ -1,4 +1,5 @@
-﻿namespace ITCS_3112_Exercise_2;
+﻿
+namespace ITCS_3112_Exercise_2.Domain;
 
 /// <summary>
 /// Represents a customer who can check out items.
@@ -6,5 +7,9 @@
 /// </summary>
 public class Customer : Person
 {
-    public List<Item> Item { get; set; } = new List<Item>();
+    public Customer(long id, string name, string email):base(id,name,email)
+    {
+        
+    }
+    
 }

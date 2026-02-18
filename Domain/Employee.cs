@@ -1,4 +1,4 @@
-﻿namespace ITCS_3112_Exercise_2;
+﻿namespace ITCS_3112_Exercise_2.Domain;
 
 /// <summary>
 /// Represents an employee who manages items.
@@ -6,5 +6,19 @@
 /// </summary>
 public class Employee : Person
 {
-    public List<Item> Item { get; set; } = new List<Item>();
+    public Employee(long id, string name, string email) : base(id, name, email)
+    {
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

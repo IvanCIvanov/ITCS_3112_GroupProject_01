@@ -1,6 +1,11 @@
-﻿namespace ITCS_3112_Exercise_2.Contracts;
+﻿namespace ITCS_3112_Exercise_2;
 
 public interface IRepository
 {
+    
+    
+    
+    
+    
     
 }

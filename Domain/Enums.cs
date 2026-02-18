@@ -1,4 +1,4 @@
-﻿namespace ITCS_3112_Exercise_2.Domain
+﻿namespace ITCS_3112_Exercise_2
 {
     /// <summary>
     /// Represents the different categories of items available in the system.

@@ -1,4 +1,4 @@
-﻿namespace ITCS_3112_Exercise_2.Contracts;
+﻿namespace ITCS_3112_Exercise_2;
 /// <summary>
 /// Interface for the CheckoutService. 
 /// </summary>

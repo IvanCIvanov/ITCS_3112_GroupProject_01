@@ -1,15 +1,31 @@
-﻿namespace ITCS_3112_Exercise_2
+﻿using ITCS_3112_Exercise_2.Domain;
+using ITCS_3112_Exercise_2.Contracts;
+namespace ITCS_3112_Exercise_2
 {
     class Program
     {
         static void Main(string[] args)
         {
+
+            IRepository repository = new Repository();
+            ICatalog catalog = new Catalog(repository);
+            
+            
+            
             // 1. Create an Item
-            Item laptop = new Item 
+            Item VrHeadset = new Item 
             { 
+                Id = 295002835,
                 Type = TypeEnum.VrHeadset, 
                 Status = StatusEnum.Available,
                 Damages = "None"
+            };
+            Item Dvd = new Item 
+            { 
+                Id = 491002837,
+                Type = TypeEnum.Dvd, 
+                Status = StatusEnum.Unavailable,
+                Damages = "Minor Scratches on Display Side."
             };
 
             // 2. Create a Customer (Inheritance)
@@ -26,11 +42,36 @@
             };
 
             // 3. Create a CheckoutRecord 
+            
+            repository.AddItem(VrHeadset);
+            repository.AddItem(Dvd);
+            
+            var availableItems = catalog.GetAvailableItems();
+
+            foreach (var i in availableItems)
+            {
+                Console.WriteLine($"ID: {i.Id} | Name: {i.Type.ToString()} | Damages: {i.Damages} | Status: {i.Status}");
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // The Receipt is created internally via the constructor
+            
             CheckoutRecord record = new CheckoutRecord("Vr Headset rented for 7 days to Ivan Ivanov.\n\t Damages: none.");
             record.Borrower = student;
-            record.Item.Add(laptop);
-            laptop.Status = StatusEnum.CheckedOut;
+            record.Item.Add(VrHeadset);
+            VrHeadset.Status = StatusEnum.CheckedOut;
 
             // 4. Print the Receipt
             record.Receipt.Print(record.Item);

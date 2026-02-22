@@ -40,6 +40,11 @@ public class Repository : IRepository
         return _inventory;
     }
 
+    public List<Item> GetAllAvailableItems()
+    {
+        return _inventory.Where(i => i.Status == StatusEnum.Available).ToList();
+    }
+
     public void DeleteItem(Item item)
     {
         // TODO: Add Try-Catch 

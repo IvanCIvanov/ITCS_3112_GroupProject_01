@@ -7,6 +7,7 @@ public interface IRepository
     void AddItem(Item item);
     Item GetItemById(long id);
     List<Item> GetAllItems();
+    List<Item> GetAllAvailableItems();
     void DeleteItem(Item item);
     
     

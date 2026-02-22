@@ -77,7 +77,12 @@ namespace ITCS_3112_Exercise_2
                 
                 //Listing all available items.
                 case "2":
-                    
+                    var availableItems = repository.GetAllAvailableItems();
+
+                    foreach (var item in availableItems)
+                    {
+                        Console.WriteLine(item);
+                    }
                     
 
                     break;

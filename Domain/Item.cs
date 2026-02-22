@@ -10,7 +10,7 @@ namespace ITCS_3112_Exercise_2.Domain;
         public string Name { get; set; }
         public TypeEnum Type { get; set; }
         public ConditionEnum Condition { get; set; }
-        public StatusEnum Status { get; set; } = StatusEnum.Available;
+        public StatusEnum Status { get; set; }
         public string Damages { get; set; }
         
         
@@ -18,7 +18,7 @@ namespace ITCS_3112_Exercise_2.Domain;
             Id = id;
             Name = name;
             Type = type;
-            Status = StatusEnum.Available;
+            Status = status;
             Condition = condition;
         }
 

@@ -28,4 +28,13 @@
         Lost,
         Reserved
     }
+
+    public enum ConditionEnum
+    {
+        Good,
+        Bad,
+        Okay,
+        Poor,
+        Unknown
+    }
 }

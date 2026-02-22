@@ -27,3 +27,18 @@ C:\Users\hoppe\Desktop\School Projects\ITCS-3112-OOS\JetBrains Projects\ITCS_311
 C:\Users\hoppe\Desktop\School Projects\ITCS-3112-OOS\JetBrains Projects\ITCS_3112_GroupProject_01\ITCS_3112_GroupProject_01\obj\Debug\net10.0\ITCS_3112_Exercise_2.pdb
 C:\Users\hoppe\Desktop\School Projects\ITCS-3112-OOS\JetBrains Projects\ITCS_3112_GroupProject_01\ITCS_3112_GroupProject_01\obj\Debug\net10.0\ITCS_3112_Exercise_2.genruntimeconfig.cache
 C:\Users\hoppe\Desktop\School Projects\ITCS-3112-OOS\JetBrains Projects\ITCS_3112_GroupProject_01\ITCS_3112_GroupProject_01\obj\Debug\net10.0\ref\ITCS_3112_Exercise_2.dll
+C:\Users\Keile\OneDrive\Misc\Documents\GitHub\ITCS_3112_GroupProject_01\bin\Debug\net10.0\ITCS_3112_Exercise_2.exe
+C:\Users\Keile\OneDrive\Misc\Documents\GitHub\ITCS_3112_GroupProject_01\bin\Debug\net10.0\ITCS_3112_Exercise_2.deps.json
+C:\Users\Keile\OneDrive\Misc\Documents\GitHub\ITCS_3112_GroupProject_01\bin\Debug\net10.0\ITCS_3112_Exercise_2.runtimeconfig.json
+C:\Users\Keile\OneDrive\Misc\Documents\GitHub\ITCS_3112_GroupProject_01\bin\Debug\net10.0\ITCS_3112_Exercise_2.dll
+C:\Users\Keile\OneDrive\Misc\Documents\GitHub\ITCS_3112_GroupProject_01\bin\Debug\net10.0\ITCS_3112_Exercise_2.pdb
+C:\Users\Keile\OneDrive\Misc\Documents\GitHub\ITCS_3112_GroupProject_01\obj\Debug\net10.0\ITCS_3112_Exercise_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Keile\OneDrive\Misc\Documents\GitHub\ITCS_3112_GroupProject_01\obj\Debug\net10.0\ITCS_3112_Exercise_2.AssemblyInfoInputs.cache
+C:\Users\Keile\OneDrive\Misc\Documents\GitHub\ITCS_3112_GroupProject_01\obj\Debug\net10.0\ITCS_3112_Exercise_2.AssemblyInfo.cs
+C:\Users\Keile\OneDrive\Misc\Documents\GitHub\ITCS_3112_GroupProject_01\obj\Debug\net10.0\ITCS_3112_Exercise_2.csproj.CoreCompileInputs.cache
+C:\Users\Keile\OneDrive\Misc\Documents\GitHub\ITCS_3112_GroupProject_01\obj\Debug\net10.0\ITCS_3112_Exercise_2.sourcelink.json
+C:\Users\Keile\OneDrive\Misc\Documents\GitHub\ITCS_3112_GroupProject_01\obj\Debug\net10.0\ITCS_3112_Exercise_2.dll
+C:\Users\Keile\OneDrive\Misc\Documents\GitHub\ITCS_3112_GroupProject_01\obj\Debug\net10.0\refint\ITCS_3112_Exercise_2.dll
+C:\Users\Keile\OneDrive\Misc\Documents\GitHub\ITCS_3112_GroupProject_01\obj\Debug\net10.0\ITCS_3112_Exercise_2.pdb
+C:\Users\Keile\OneDrive\Misc\Documents\GitHub\ITCS_3112_GroupProject_01\obj\Debug\net10.0\ITCS_3112_Exercise_2.genruntimeconfig.cache
+C:\Users\Keile\OneDrive\Misc\Documents\GitHub\ITCS_3112_GroupProject_01\obj\Debug\net10.0\ref\ITCS_3112_Exercise_2.dll

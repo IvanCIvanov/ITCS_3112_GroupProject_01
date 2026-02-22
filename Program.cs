@@ -141,18 +141,6 @@ namespace ITCS_3112_Exercise_2
             
            
             /*
-            // 1. Create an Item
-            Item vrHeadset = new Item(295002835, "Oculus Rift", TypeEnum.VrHeadset)
-            { 
-                Status = StatusEnum.Available,
-                Damages = "None"
-            };
-            Item dvd = new Item(491002837, "Prince of Persia", TypeEnum.Dvd)
-            { 
-                Status = StatusEnum.Unavailable,
-                Damages = "Minor Scratches on Display Side."
-            };
-
             // 2. Create a Customer (Inheritance)
             Customer student = new Customer(101, "Ivan", "iivanov2@charlotte.edu");
 
@@ -162,39 +150,6 @@ namespace ITCS_3112_Exercise_2
             
             repository.AddItem(vrHeadset);
             repository.AddItem(dvd);
-            
-            var availableItems = catalog.GetAvailableItems();
-
-            foreach (var i in availableItems)
-            {
-                Console.WriteLine($"ID: {i.Id} | Name: {i.Type.ToString()} | Damages: {i.Damages} | Status: {i.Status}");
-            }
-            
-       
-            
-            // 4. Checkout an item
-            
-            // 5. Return Item
-            
-            // 6. Show due soon (next 24hr)
-            
-            //7. Show overdue items
-            
-            //8. Search items (optional)
-            
-            // 9. Mark item lost
-            
-            // 0. Exit
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
             
             

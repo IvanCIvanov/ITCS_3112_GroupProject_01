@@ -6,6 +6,19 @@ public class Repository : IRepository
     /// Singular Repository
     private List<Item> _inventory = new List<Item>();
 
+    public Repository()
+    {
+        _inventory.Add(new Item(295002835, "Oculus Rift", TypeEnum.VrHeadset,StatusEnum.Available, ConditionEnum.Good)
+        {
+            Damages = "None"
+        }); 
+        
+        _inventory.Add(new Item(491002837,"Prince of Persia", TypeEnum.Dvd,StatusEnum.Unavailable, ConditionEnum.Poor)
+        {
+            Damages = "Minor Scratches on Display Side."
+        });
+    }
+
     public void AddItem(Item item)
     {
         // Simple validation to prevent duplicate IDs

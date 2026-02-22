@@ -71,11 +71,14 @@ namespace ITCS_3112_Exercise_2
                         newItemCondition
                         );
                     
+                    repository.AddItem(newItem);
                     Console.WriteLine(newItem);
                     break;
                 
                 //Listing all available items.
                 case "2":
+                    
+                    
 
                     break;
                 

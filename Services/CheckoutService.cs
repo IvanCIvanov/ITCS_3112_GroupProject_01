@@ -6,39 +6,36 @@ namespace ITCS_3112_Exercise_2.Domain;
 public class CheckoutService : ICheckoutService
 {
     
-    public DateTime CheckoutDate { get; set; }
-    public DateTime DueDate { get; set; }
-    public Person Borrower { get; set; }
-    public Item Item { get; set; }
-    public Receipt Receipt { get; private set; }
+    
     public ICatalog GetCatalog { get; }
+    public IRepository _repository;
+    public IClock _clock;
 
     /// <summary>
     /// Composition: The CheckoutRecord "owns" the Receipt.
     /// The Receipt is instantiated here and its lifecycle is tied to this record.
     /// </summary>
-    
-    public CheckoutService(string summary, Customer borrower, ICatalog getCatalog)
+    ///
+
+    public CheckoutService(IRepository repository, IClock clock)
     {
-        Borrower = borrower;
-        GetCatalog = getCatalog;
-        CheckoutDate = DateTime.Now;
-        DueDate = DateTime.Now.AddDays(7);
-        // Instantiating the Receipt inside the constructor ensures Composition.
-        Receipt = new Receipt { Summary = summary };
+        _repository = repository;
+        _clock = clock;
     }
     
-    public Receipt Checkout(string itemId, Customer customer, DateTime dueDate)
+    
+    
+    public Receipt Checkout(long itemId, Customer customer, DateTime dueDate)
     {
         throw new NotImplementedException();
     }
 
-    public Receipt ReturnItem(string itemId)
+    public Receipt ReturnItem(long itemId)
     {
         throw new NotImplementedException();
     }
 
-    public void MarkLost(string itemId)
+    public void MarkLost(long itemId)
     {
         throw new NotImplementedException();
     }

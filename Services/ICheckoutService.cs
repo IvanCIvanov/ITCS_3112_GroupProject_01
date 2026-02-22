@@ -10,11 +10,11 @@ public interface ICheckoutService
 {
     ICatalog GetCatalog { get; }
 
-    Receipt Checkout(string itemId, Customer customer, DateTime dueDate);
+    Receipt Checkout(long itemId, Customer customer, DateTime dueDate);
 
-    Receipt ReturnItem(string itemId);
+    Receipt ReturnItem(long itemId);
     
-    void MarkLost(string itemId);
+    void MarkLost(long itemId);
 
     List<Domain.CheckoutService> ListActiveLoans();
 

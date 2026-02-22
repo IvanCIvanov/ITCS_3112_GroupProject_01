@@ -101,8 +101,31 @@ namespace ITCS_3112_Exercise_2
                     break;
                 
                 //4. Check out item"
+                //Currently working on this section
                 case "4":
+                    Console.WriteLine("Enter item ID: ");
+                    long itemID = long.Parse(Console.ReadLine());
+                    
+                    Console.WriteLine("Enter borrower name: ");
+                    string borrowerName = Console.ReadLine();
+                    
+                    Console.WriteLine("Enter borrower email: ");
+                    string borrowerEmail = Console.ReadLine();
+                    
+                    Console.WriteLine("Enter due date (YYYY-MM-DD: ");
+                    DateTime borrowerDueDate = DateTime.Parse(Console.ReadLine());
 
+                    var record = CheckoutService.Checkout(itemID, borrower, borrowerEmail, borrowerDueDate);
+                    
+                    Console.WriteLine("\nProof of functionality: ");
+                    Console.WriteLine("\nCustomer Name tied to Item on Checkout Record:");
+                    Console.WriteLine("---RECEIPT---");
+                    Console.WriteLine("Name: "+ service.Borrower.Name);
+                    Console.WriteLine("Item Borrowed: "+service.Item.Type); 
+                    Console.WriteLine("Date Checked Out: "+service.CheckoutDate);
+                    Console.WriteLine("Due Date: "+service.DueDate);
+                    service.Receipt.Print(service.Item);
+                    Console.WriteLine("--- END OF RECEIPT ---");
                     break;
                 
                 //5. Return item"
@@ -161,15 +184,10 @@ namespace ITCS_3112_Exercise_2
             vrHeadset.Status = StatusEnum.CheckedOut;
 
             // 4. Print the Receipt
-            service.Receipt.Print(service.Item);
-            Console.WriteLine("--- END OF RECEIPT ---");
             
-            Console.WriteLine("\nProof of functionality: ");
-            Console.WriteLine("\nCustomer Name tied to Item on Checkout Record:");
-            Console.WriteLine("Name: "+ service.Borrower.Name);
-            Console.WriteLine("Item Borrowed: "+service.Item.Type); 
-            Console.WriteLine("Date Checked Out: "+service.CheckoutDate);
-            Console.WriteLine("Due Date: "+service.DueDate);
+            
+            
+           
 
             Console.WriteLine("\nStatus of checked out Item: " + service.Item.Status);
             

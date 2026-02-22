@@ -8,6 +8,7 @@ public interface IRepository
     Item GetItemById(long id);
     List<Item> GetAllItems();
     List<Item> GetAllAvailableItems();
+    List<Item> GetAllUnavailableItems();
     void DeleteItem(Item item);
     
     

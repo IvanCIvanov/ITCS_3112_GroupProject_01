@@ -89,6 +89,14 @@ namespace ITCS_3112_Exercise_2
                 
                 //3. List unavailable items"
                 case "3":
+                    
+                    var unavailableItems = repository.GetAllUnavailableItems();
+
+                    foreach (var item in unavailableItems)
+                    {
+                        Console.WriteLine(item);
+                    }
+
 
                     break;
                 

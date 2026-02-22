@@ -17,6 +17,11 @@ public class Repository : IRepository
         {
             Damages = "Minor Scratches on Display Side."
         });
+        
+        _inventory.Add(new Item(100200399,"Canon EOS R100 Mirrorless Camera", TypeEnum.Camera,StatusEnum.Lost, ConditionEnum.Unknown)
+        {
+            Damages = "Unknown - never returned to library."
+        });
     }
 
     public void AddItem(Item item)
@@ -43,6 +48,11 @@ public class Repository : IRepository
     public List<Item> GetAllAvailableItems()
     {
         return _inventory.Where(i => i.Status == StatusEnum.Available).ToList();
+    }
+    
+    public List<Item> GetAllUnavailableItems()
+    {
+        return _inventory.Where(i => i.Status != StatusEnum.Available).ToList();
     }
 
     public void DeleteItem(Item item)

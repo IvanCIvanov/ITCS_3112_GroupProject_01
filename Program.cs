@@ -27,6 +27,7 @@ namespace ITCS_3112_Exercise_2
 
             switch (userInput)
             {
+                //Entering in a new item.
                 case "1":
                     
                     //Entering in new item ID.
@@ -53,7 +54,7 @@ namespace ITCS_3112_Exercise_2
                         Console.WriteLine("Invalid item status.");
                     }
                     
-                    //Enterint in new item's condition.
+                    //Entering in new item's condition.
                     Console.WriteLine("Enter condition (Good, Bad, Okay, Poor, Unknown): ");
                     ConditionEnum newItemCondition;
                     while (!Enum.TryParse(Console.ReadLine(), true, out newItemCondition))
@@ -61,11 +62,6 @@ namespace ITCS_3112_Exercise_2
                         Console.WriteLine("Invalid item condition.");
                     }
                     
-                    
-                    
-                   
-                    
-                   
 
                     Item newItem = new Item(
                         newItemID,
@@ -77,6 +73,53 @@ namespace ITCS_3112_Exercise_2
                     
                     Console.WriteLine(newItem);
                     break;
+                
+                //Listing all available items.
+                case "2":
+
+                    break;
+                
+                //3. List unavailable items"
+                case "3":
+
+                    break;
+                
+                //4. Check out item"
+                case "4":
+
+                    break;
+                
+                //5. Return item"
+                case "5":
+                    Console.WriteLine("congrats you're working!");
+
+                    break;
+                
+                //6. Show due soon
+                case "6":
+
+                    break;
+                
+                //7. Show overdue items
+                case "7":
+
+                    break;
+                
+                //8. Search items (optional)
+                case "8":
+
+                    break;
+                
+                //9. Mark item LOST
+                case "9":
+
+                    break;
+                
+                //0. Exit
+
+                    break;
+                   
+                    
                     
             }
             

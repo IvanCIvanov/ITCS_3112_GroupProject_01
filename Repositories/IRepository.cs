@@ -11,6 +11,10 @@ public interface IRepository
     List<Item> GetAllUnavailableItems();
     void DeleteItem(Item item);
     
+    // Added for CheckoutService support
+    void AddCheckoutRecord(CheckoutRecord record);
+    List<CheckoutRecord> GetAllCheckoutRecords();
+    
     
     // We might also need methods for CheckoutRecords later
 

@@ -13,9 +13,7 @@ public class CheckoutRecord
         Item = item;
         Borrower = borrower;
         CheckoutDate = DateTime.Now;
-        DueDate = DateTime.Now.AddDays(7);
-        // Instantiating the Receipt inside the constructor ensures Composition.
-        
+        DueDate = dueDate; 
         
         Receipt = new Receipt { Summary = summary };
     }

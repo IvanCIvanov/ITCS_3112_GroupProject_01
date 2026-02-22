@@ -1,6 +1,7 @@
-﻿namespace ITCS_3112_Exercise_2;
+﻿using ITCS_3112_Exercise_2.Domain;
+namespace ITCS_3112_Exercise_2;
 
-public class IPolicy
+public interface IPolicy
 {
-    
+    bool CanCheckout(Item item);
 }

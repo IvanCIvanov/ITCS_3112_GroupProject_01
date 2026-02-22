@@ -1,6 +1,6 @@
 ﻿namespace ITCS_3112_Exercise_2.Services;
 
-public class SystemClock
+public class SystemClock : IClock
 {
-    
+    public DateTime Now => DateTime.Now;
 }

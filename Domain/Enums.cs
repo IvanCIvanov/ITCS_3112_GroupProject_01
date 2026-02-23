@@ -29,6 +29,9 @@
         Reserved
     }
 
+    /// <summary>
+    /// Represents the current conidition of the item.
+    /// </summary>
     public enum ConditionEnum
     {
         Good,

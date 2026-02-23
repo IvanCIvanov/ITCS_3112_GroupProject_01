@@ -15,8 +15,6 @@ public interface IRepository
     void AddCheckoutRecord(CheckoutRecord record);
     List<CheckoutRecord> GetAllCheckoutRecords();
     
-    
-    // We might also need methods for CheckoutRecords later
 
 
 

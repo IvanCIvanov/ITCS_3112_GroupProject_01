@@ -132,7 +132,7 @@ namespace ITCS_3112_Exercise_2
                         Console.WriteLine("Enter borrower email: ");
                         string borrowerEmail = Console.ReadLine();
                         
-                        Console.WriteLine("Enter due date (YYYY-MM-DD: ");
+                        Console.WriteLine("Enter due date (YYYY-MM-DD): ");
                         DateTime borrowerDueDate = DateTime.Parse(Console.ReadLine());
                         Console.WriteLine("Enter a summary of the transaction: ");
                         string employeeSummary = Console.ReadLine();
@@ -153,7 +153,18 @@ namespace ITCS_3112_Exercise_2
 
                     //5. Return item
                     case "5":
-                        Console.WriteLine("congrats you're working!");
+                        Console.WriteLine("Enter item ID: ");
+                        long itemId = long.Parse(Console.ReadLine());
+
+                        try
+                        {
+                            var receipt = checkoutService.ReturnItem((itemId));
+                            Console.WriteLine(receipt.Summary);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
 
                         break;
 
@@ -184,6 +195,20 @@ namespace ITCS_3112_Exercise_2
 
                     //9. Mark item LOST
                     case "9":
+                        Console.WriteLine("Enter item ID: ");
+                        long lostId = long.Parse(Console.ReadLine());
+
+                        try
+                        {
+                            checkoutService.MarkLost(lostId);
+                            Console.WriteLine($"{lostId} is successfully marked as lost");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+                        
                         
                         break;
                     

@@ -11,6 +11,9 @@ using ITCS_3112_Exercise_2.Services;
 /// 
 namespace ITCS_3112_Exercise_2
 {
+    /// <summary>
+    /// 
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

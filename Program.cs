@@ -3,6 +3,12 @@ using ITCS_3112_Exercise_2.Domain;
 using ITCS_3112_Exercise_2.Contracts;
 using ITCS_3112_Exercise_2.Services;
 
+///* Lab 1 NinerCS Equipment Checkout
+/// Authors:
+///     Ivan Ivanov - 801084868
+///     Keilee Wright 801405109
+///
+/// 
 namespace ITCS_3112_Exercise_2
 {
     class Program
@@ -190,6 +196,13 @@ namespace ITCS_3112_Exercise_2
 
                     //8. Search items (optional)
                     case "8":
+                        Console.WriteLine("What was the item you were looking for ");
+                        long findId = long.Parse(Console.ReadLine());
+
+                        try
+                        {
+                            checkoutService.
+                        }
 
                         break;
 

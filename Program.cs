@@ -197,11 +197,23 @@ namespace ITCS_3112_Exercise_2
                     //8. Search items (optional)
                     case "8":
                         Console.WriteLine("What was the item you were looking for ");
-                        long findId = long.Parse(Console.ReadLine());
+                        string query = Console.ReadLine();
+                        var results = catalog.Search(query);
 
-                        try
+                        if (results.Count == 0)
                         {
-                            checkoutService.
+                            Console.WriteLine("No items found.");
+                        }
+                        else
+                        {
+                            foreach (var item in results)
+                            {
+                                Console.WriteLine($"ID: {item.Id}");
+                                Console.WriteLine($"Name: {item.Name}");
+                                Console.WriteLine($"Type: {item.Type}");
+                                Console.WriteLine($"Status: {item.Status}");
+                                Console.WriteLine("-----------------------");
+                            }
                         }
 
                         break;
